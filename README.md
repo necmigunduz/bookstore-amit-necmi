@@ -7,7 +7,65 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
+# Bookstore
+
+A bookstore app where the user can create and remove books as well as browse through his collection by applying category filters 
+
+## Built With
+
+- React.js
+- Redux
+- CSS
+- HTML
+- npm
+- Prop-Types
+- React-Redux
+
+## [Live Link](https://bookstore-necmi-amit.herokuapp.com/)
+
+## Getting Started
+
+To get a local copy running
+
+- `git clone https://github.com/necmigunduz/bookstore-amit-necmi`
+- `cd bookstore-amit-necmi`
+- `npm install`
+- `npm run start`
+
+## Authors
+
+👤 **Necmi Gunduz**
+
+- LinkedIn: [Necmi Gunduz](https://www.linkedin.com/in/necmigunduz/)
+- Github: [@necmigunduz](https://github.com/necmigunduz/)
+- Twitter: [@necm_gun](https://twitter.com/necm_gun)
+- Mail: [necmigunduz@gmail.com](necmigunduz@gmail.com)
+
+👤 **Amit Kumar**
+
+- GitHub: [@KumarAmitt](https://github.com/KumarAmitt)
+- Twitter: [@ArrshAmit](https://twitter.com/ArrshAmitt)
+- LinkedIn: [@kumar-amitt](https://www.linkedin.com/in/kumar-amitt)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- To Microverse for their `README` template.
+
+## 📝 [License]
+
+MIT License
+{"mode":"full","isActive":false}
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
