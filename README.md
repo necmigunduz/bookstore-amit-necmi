@@ -11,7 +11,7 @@ In the project directory, you can run:
 
 # Bookstore
 
-A bookstore app where the user can create and remove books as well as browse through his collection by applying category filters 
+A bookstore app where the user can create and remove books as well as browse through his collection by applying category filters. 
 
 ## Built With
 
