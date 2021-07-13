@@ -6,8 +6,8 @@ import rootReducer from './reducers/indexReducer';
 import './index.css';
 import App from './App';
 
-const initialState = [
-  {
+const initialState = {
+  books: [{
     bookId: Math.random(),
     title: 'Adam\'s Life',
     category: 'Biography',
@@ -21,8 +21,8 @@ const initialState = [
     bookId: Math.random(),
     title: 'Cricket History in India',
     category: 'History',
-  },
-];
+  }],
+};
 
 const store = createStore(rootReducer, initialState);
 
