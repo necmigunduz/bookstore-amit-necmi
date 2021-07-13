@@ -22,4 +22,8 @@ BooksList.propTypes = {
   category: PropTypes.string.isRequired,
 };
 
-export default connect(BooksList);
+const mapStateToProps = (state) => ({
+  books: state.books,
+});
+
+export default connect(mapStateToProps)(BooksList);

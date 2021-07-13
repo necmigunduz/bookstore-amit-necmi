@@ -6,13 +6,6 @@ import rootReducer from './reducers/indexReducer';
 import './index.css';
 import App from './App';
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
-
 const initialState = [
   {
     bookId: Math.random(),
@@ -31,4 +24,11 @@ const initialState = [
   },
 ];
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, initialState);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);

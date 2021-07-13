@@ -8,7 +8,7 @@ const BooksForm = () => {
       <input type="text" />
       <select>
         {
-            categories.each((e) => <option>{e}</option>)
+            categories.map((e) => <option key={Math.random()} value={e}>{e}</option>)
           }
       </select>
       <button type="submit">Submit</button>
