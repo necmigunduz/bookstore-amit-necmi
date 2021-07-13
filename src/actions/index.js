@@ -8,7 +8,7 @@ const createBook = (book) => (
             category
         }
     }
-)
+);
     
 
 const removeBook = (book) => (
@@ -17,4 +17,5 @@ const removeBook = (book) => (
         payload: {
             bookId
         }
-)
+    }
+);

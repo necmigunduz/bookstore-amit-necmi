@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers/indexReducer';
 import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root'),
@@ -13,20 +15,20 @@ ReactDOM.render(
 
 const initialState = [
   {
-    bookId: Math.random(3),
+    bookId: Math.random(),
     title: 'Adam\'s Life',
     category: 'Biography',
   },
   {
-    bookId: Math.random(3),
+    bookId: Math.random(),
     title: 'Football Heroes',
     category: 'Sports',
   },
   {
-    bookId: Math.random(3),
+    bookId: Math.random(),
     title: 'Cricket History in India',
     category: 'History',
   },
 ];
 
-const store = createStore();
+const store = createStore(rootReducer);
