@@ -6,10 +6,11 @@ function App() {
   return (
     <div className="App">
       <h2>BookStore</h2>
+      <BooksForm />
+      <br />
       <table>
         <BooksList />
       </table>
-      <BooksForm />
     </div>
   );
 }
