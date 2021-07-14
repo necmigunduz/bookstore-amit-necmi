@@ -8,17 +8,17 @@ import App from './App';
 
 const initialState = {
   books: [{
-    bookId: Math.random(),
+    bookId: Math.random().toString(),
     title: 'Adam\'s Life',
     category: 'Biography',
   },
   {
-    bookId: Math.random(),
+    bookId: Math.random().toString(),
     title: 'Football Heroes',
     category: 'Sports',
   },
   {
-    bookId: Math.random(),
+    bookId: Math.random().toString(),
     title: 'Cricket History in India',
     category: 'History',
   }],
