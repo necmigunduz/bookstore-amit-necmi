@@ -4,12 +4,10 @@ import BooksForm from './container/BooksForm';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <h2>BookStore</h2>
-      <table className="App">
-        <tbody>
-          <BooksList />
-        </tbody>
+      <table>
+        <BooksList />
       </table>
       <BooksForm />
     </div>

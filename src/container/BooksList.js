@@ -4,32 +4,43 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
 
-const BooksList = ({ bookId, title, category }) => {
-  const handleRemoveBook = (bookId) => {
-    removeBook(bookId);
+const BooksList = (props) => {
+  const { books, removeBook } = props;
+  const handleRemoveBook = (book) => {
+    removeBook(book);
   };
   return (
     <>
-      <tr>
-        <th>BookId</th>
-        <th>Title</th>
-        <th>Category</th>
-        { books.map((e) => <Book book={e} key={e.bookId} handleRemoveBook={handleRemoveBook} />)}
-      </tr>
+      <thead>
+        <tr>
+          <th>BookId</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+        books.map((book) => (
+          <Book
+            book={book}
+            key={book.bookId}
+            handleRemoveBook={(bookId) => handleRemoveBook(bookId)}
+          />
+        ))
+         }
+      </tbody>
     </>
   );
 };
 
 BooksList.propTypes = {
-  bookId: PropTypes.number,
-  title: PropTypes.string,
-  category: PropTypes.string,
+  books: PropTypes.arrayOf(PropTypes.object),
+  removeBook: PropTypes.func.isRequired,
 };
 
 BooksList.defaultProps = {
-  bookId: Math.random(),
-  title: '',
-  category: '',
+  books: [],
 };
 
 const mapStateToProps = (state) => ({
@@ -37,8 +48,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  removeBook: (bookId) => {
-    dispatch(removeBook(bookId));
+  removeBook: (book) => {
+    dispatch(removeBook(book));
   },
 });
 
