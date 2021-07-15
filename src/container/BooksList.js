@@ -66,6 +66,7 @@ BooksList.defaultProps = {
 
 const mapStateToProps = (state) => ({
   books: state.books,
+  filter1: state.filter.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
