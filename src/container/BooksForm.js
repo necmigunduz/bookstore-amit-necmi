@@ -37,7 +37,7 @@ const BooksForm = (props) => {
       <select onChange={(e) => handleChange(e)} value={category}>
         {
             categories.map((e) => <option key={Math.random()} value={e.id}>{e}</option>)
-          }
+        }
       </select>
       <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
     </form>
