@@ -4,14 +4,18 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 function header() {
   return (
-    <div className="header">
+    <header>
       <div className="header">
-        <p className="Bookstore-CMS">Bookstore CMS</p>
-        <span className="BOOKS">BOOKS</span>
-        <span className="CATEGORIES">CATEGORIES</span>
+        <div className="header-left">
+          <h1 className="Bookstore-CMS">Bookstore CMS</h1>
+          <div className="header-left-links">
+            <span className="BOOKS active">BOOKS</span>
+            <span className="CATEGORIES">CATEGORIES</span>
+          </div>
+        </div>
+        <div className="header-right"><FontAwesomeIcon icon={faUserCircle} /></div>
       </div>
-      <div className="Mask"><FontAwesomeIcon icon={faUserCircle} /></div>
-    </div>
+    </header>
   );
 }
 

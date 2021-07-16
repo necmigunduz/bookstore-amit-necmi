@@ -11,7 +11,7 @@ const BooksList = (props) => {
   };
   return (
     <>
-      <tbody>
+      <main>
         {
         books.map((book) => (
           <Book
@@ -21,7 +21,7 @@ const BooksList = (props) => {
           />
         ))
          }
-      </tbody>
+      </main>
     </>
   );
 };
