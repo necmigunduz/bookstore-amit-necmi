@@ -1,54 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+  width: 87.5rem;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;  
+}
 
 :root {
   --azure: #0290ff;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-table,
-th,
-td {
-  border: 1px solid;
-  margin: auto;
 }
 
 .Bookstore-CMS {
@@ -80,7 +42,7 @@ td {
 }
 
 .CATEGORIES {
-  width: 6.563rem;
+  width: rem;
   height: 1rem;
   margin: 1.125rem 41.5rem 0.688rem 2.563rem;
   opacity: 0.5;
@@ -118,7 +80,7 @@ td {
   color: var(--black-two);
 }
 
-title {
+.title {
   width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
@@ -172,6 +134,8 @@ title {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  border: none;
+  background-color: inherit;
 }
 
 .Edit {
@@ -305,4 +269,13 @@ title {
 .header {
   display: flex;
   justify-content: space-evenly;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-20 {
+  padding: 10px;
 }
