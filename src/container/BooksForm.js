@@ -32,15 +32,19 @@ const BooksForm = (props) => {
   };
 
   return (
-    <form>
-      <input type="text" onChange={(e) => handleChange(e)} value={title} />
-      <select onChange={(e) => handleChange(e)} value={category}>
-        {
-            categories.map((e) => <option key={Math.random()} value={e.id}>{e}</option>)
-        }
-      </select>
-      <button type="submit" onClick={(e) => handleSubmit(e)}>Submit</button>
-    </form>
+
+    <div className="form-container">
+      <h2>Add New Book</h2>
+      <form>
+        <input type="text" onChange={(e) => handleChange(e)} value={title} placeholder="Book Title" />
+        <select onChange={(e) => handleChange(e)} value={category}>
+          {
+              categories.map((e) => <option key={Math.random()} value={e.id}>{e}</option>)
+          }
+        </select>
+        <button type="submit" onClick={(e) => handleSubmit(e)}>Add Book</button>
+      </form>
+    </div>
   );
 };
 
