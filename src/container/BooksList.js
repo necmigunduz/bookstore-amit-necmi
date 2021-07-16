@@ -11,14 +11,6 @@ const BooksList = (props) => {
   };
   return (
     <>
-      <thead>
-        <tr>
-          <th>BookId</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Action</th>
-        </tr>
-      </thead>
       <tbody>
         {
         books.map((book) => (
