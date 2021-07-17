@@ -1,8 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import CategoryFilter from './CategoryFilter';
+import { changeFilter } from '../actions';
 
-function header() {
+function Header(props) {
+  const { filterBook } = props;
+  const handleFilterChange = (filter) => {
+    filterBook(filter);
+  };
   return (
     <header>
       <div className="header">
@@ -11,6 +19,7 @@ function header() {
           <div className="header-left-links">
             <span className="BOOKS active">BOOKS</span>
             <span className="CATEGORIES">CATEGORIES</span>
+            <CategoryFilter filterChange={handleFilterChange} />
           </div>
         </div>
         <div className="header-right"><FontAwesomeIcon icon={faUserCircle} /></div>
@@ -19,4 +28,14 @@ function header() {
   );
 }
 
-export default header;
+Header.propTypes = {
+  filterBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  filterBook: (filter) => {
+    dispatch(changeFilter(filter));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(Header);

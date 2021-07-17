@@ -27,7 +27,7 @@ const Book = ({ book, handleRemoveBook }) => (
           <div className="circle" />
         </div>
         <div className="progress-info">
-          <div className="progress-info-percentage">64%</div>
+          <div className="progress-info-percentage">{`${Math.floor(Math.random() * 100)}%`}</div>
           <div className="progress-info-status">Completed</div>
         </div>
       </div>
