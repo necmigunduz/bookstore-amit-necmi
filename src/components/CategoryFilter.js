@@ -5,7 +5,7 @@ const CategoryFilter = (props) => {
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const { filterChange } = props;
   return (
-    <select onChange={(e) => filterChange(e.target.value)}>
+    <select className="category-filter" onChange={(e) => filterChange(e.target.value)}>
       {categories.map((cat) => (
         <option key={cat} value={cat}>{cat}</option>
       ))}

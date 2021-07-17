@@ -53,6 +53,18 @@ header {
   color: #000;
 }
 
+.category-filter {
+  border: none;
+  margin-left: 1em;
+  background: transparent;
+  appearance: none;
+  color: var(--azure);
+}
+
+.category-filter:focus {
+  outline: none;
+}
+
 .header-right {
   margin-right: 2em;
   color: var(--azure);

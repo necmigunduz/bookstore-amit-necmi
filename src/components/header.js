@@ -18,7 +18,7 @@ function Header(props) {
           <h1 className="Bookstore-CMS">Bookstore CMS</h1>
           <div className="header-left-links">
             <span className="BOOKS active">BOOKS</span>
-            <span className="CATEGORIES">CATEGORIES</span>
+            <span className="CATEGORIES">CATEGORIES &gt;</span>
             <CategoryFilter filterChange={handleFilterChange} />
           </div>
         </div>
