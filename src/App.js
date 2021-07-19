@@ -8,7 +8,9 @@ function App() {
       <h2>BookStore</h2>
       <BooksForm />
       <br />
-      <BooksList />
+      <table>
+        <BooksList />
+      </table>
     </div>
   );
 }
