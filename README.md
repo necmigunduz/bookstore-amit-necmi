@@ -10,7 +10,7 @@ A web app to record the information of books.
 
 ## Live Demo
 
-[View Live]() Will be updated soon
+[View Live](`https://bookstore-necmi-amit.herokuapp.com/`) Will be updated soon.
 
 ## Built With 🛠
 
