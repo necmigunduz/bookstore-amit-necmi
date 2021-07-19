@@ -1,14 +1,14 @@
-import './App.css';
+import './index.css';
 import BooksList from './container/BooksList';
 import BooksForm from './container/BooksForm';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
-      <h2>BookStore</h2>
-      <BooksForm />
-      <br />
+      <Header />
       <BooksList />
+      <BooksForm />
     </div>
   );
 }

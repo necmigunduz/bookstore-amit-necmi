@@ -3,51 +3,28 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
-import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = (props) => {
   const {
-    books, removeBook, filterBook, filter1,
+    books, removeBook, filter1,
   } = props;
-
   const handleRemoveBook = (book) => {
     removeBook(book);
   };
 
-  const handleFilterChange = (filter) => {
-    filterBook(filter);
-  };
-
   return (
     <>
-      <div>
-        <CategoryFilter filterChange={handleFilterChange} />
-        <div>
-          {filter1}
-        </div>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>BookId</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            books.filter((book) => book.category === filter1 || filter1 === 'All' || filter1 === '').map((book) => (
-              <Book
-                book={book}
-                key={book.bookId}
-                handleRemoveBook={(bookId) => handleRemoveBook(bookId)}
-                filter={filter1}
-              />
-            ))
-          }
-        </tbody>
-      </table>
+      <main>
+        {
+        books.filter((book) => book.category === filter1 || filter1 === 'All' || filter1 === '').map((book) => (
+          <Book
+            book={book}
+            key={book.bookId}
+            handleRemoveBook={(bookId) => handleRemoveBook(bookId)}
+          />
+        ))
+         }
+      </main>
     </>
   );
 };
@@ -55,7 +32,6 @@ const BooksList = (props) => {
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
   removeBook: PropTypes.func.isRequired,
-  filterBook: PropTypes.func.isRequired,
   filter1: PropTypes.string,
 };
 
